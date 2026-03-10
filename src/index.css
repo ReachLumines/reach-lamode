@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 332 65% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 332 65% 95%;
+    --accent-foreground: 332 65% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 332 65% 45%;
+
+    /* REACH CAD specific design tokens */
+    --reach-purple: 260 70% 50%;
+    --reach-magenta: 332 65% 45%;
+    --reach-gradient: linear-gradient(135deg, hsl(var(--reach-purple)), hsl(var(--reach-magenta)));
+    --reach-gradient-subtle: linear-gradient(135deg, hsl(var(--reach-purple) / 0.1), hsl(var(--reach-magenta) / 0.1));
+    
+    /* Professional shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--reach-magenta) / 0.2);
+    --shadow-card: 0 4px 6px -1px hsl(240 5.9% 10% / 0.1);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.bg-a31951 { background-color: #A31951; }
+
+.text-a31951 { color: #A31951; }
+
+/* #A31951 */
+.icon-a31951 {
+  filter: brightness(0) saturate(100%)
+    invert(20%) sepia(85%) saturate(2900%)
+    hue-rotate(325deg) brightness(90%) contrast(95%);
+}
+
+/* ============================= */
+/* MINT / TEAL COLOR PALETTE */
+/* ============================= */
+
+/* Background colors */
+.bg-teal-25  { background-color: #F0FBF9; }
+.bg-teal-50  { background-color: #D9F7F2; }
+.bg-teal-100 { background-color: #A6EFE3; }
+.bg-teal-200 { background-color: #6AD6C8; }
+.bg-teal-400 { background-color: #2FB7A8; }
+.bg-teal-600 { background-color: #0E8F85; }
+.bg-teal-800 { background-color: #04665E; }
+.bg-teal-900 { background-color: #043F3B; }
+
+/* Text colors */
+.text-teal-25  { color: #F0FBF9; }
+.text-teal-50  { color: #D9F7F2; }
+.text-teal-100 { color: #A6EFE3; }
+.text-teal-200 { color: #6AD6C8; }
+.text-teal-400 { color: #2FB7A8; }
+.text-teal-600 { color: #0E8F85; }
+.text-teal-800 { color: #04665E; }
+.text-teal-900 { color: #043F3B; }
+
+/* PNG Icon filters (teal/mint) */
+
+/* Light mint */
+.icon-teal-100 {
+  filter: brightness(0) saturate(100%)
+    invert(87%) sepia(24%) saturate(480%)
+    hue-rotate(130deg) brightness(105%) contrast(95%);
+}
+
+/* Medium teal */
+.icon-teal-400 {
+  filter: brightness(0) saturate(100%)
+    invert(54%) sepia(45%) saturate(980%)
+    hue-rotate(135deg) brightness(95%) contrast(95%);
+}
+
+/* Dark teal */
+.icon-teal-600 {
+  filter: brightness(0) saturate(100%)
+    invert(32%) sepia(55%) saturate(980%)
+    hue-rotate(145deg) brightness(90%) contrast(95%);
+}
+
+/* Deep dark teal */
+.icon-teal-800 {
+  filter: brightness(0) saturate(100%)
+    invert(18%) sepia(45%) saturate(700%)
+    hue-rotate(150deg) brightness(85%) contrast(100%);
+}
