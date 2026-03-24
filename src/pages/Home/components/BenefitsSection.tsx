@@ -51,7 +51,7 @@ const BenefitsSection = () => {
           Benefits of REACH Lamode
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Best In Class Lamode Software
+          Best In Class Vector Software for Fashion Design
         </p>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

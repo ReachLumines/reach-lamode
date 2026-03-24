@@ -31,7 +31,7 @@ const Footer = () => {
               <span className="text-primary">REACH</span> Lamode
             </Link>
             <p className="text-gray-300 max-w-md">
-              Best In Class Lamode Software
+              Best In Class Vector Software for Fashion Design
             </p>
 
 
